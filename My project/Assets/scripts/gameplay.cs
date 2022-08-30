@@ -1,62 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class gameplay : MonoBehaviour
 {
-    [SerializeField] private int guess;
     [SerializeField] private int minValue;
     [SerializeField] private int maxValue;
-    // Start is called before the first frame update
-    void Start()
-    {
-       StartGame();
-    }
+    [SerializeField] private TextMeshProUGUI guessText;
 
-    // Update is called once per frame
-    void Update()
+    private int guess;
+    void Start() 
     {
-        cum();
+      NextGuess();   
     }
-    public void OnPressHigher()
+    public void cum()
     {
-            minValue = guess;
-            guess = (maxValue + minValue) / 2;
+       minValue = guess + 1;
+       NextGuess();
     }
-    public void OnPressLower()
+    public void sex()
     {
-            maxValue = guess;
-            guess = (maxValue +minValue) / 2;
+        maxValue = guess -1 ;
+        NextGuess();
     }
     public void NextGuess()
     {
-
+        guess= Random.Range(minValue, maxValue + 1);
+        guessText.text = guess.ToString();
     }
-    void StartGame()
-    {
-        guess = 5;
-        maxValue = 10;
-        minValue = 1;
-        
-        maxValue = maxValue+1;
-    }
-    void cum()
-    {
-         if(Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            minValue = guess;
-            guess = (maxValue + minValue) / 2;
-        }
-        if(Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            maxValue = guess;
-            guess = (maxValue +minValue) / 2;
-        }
-        if(Input.GetKeyDown(KeyCode.Return))
-        {
-            Debug.Log("HAHAHA I am so smart it was " +guess+ " you dumass");
-            Debug.Log("");
-            StartGame();
-        }
-    }
+    
 }
