@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 1205058152}
   - component: {fileID: 1205058151}
   m_Layer: 5
-  m_Name: guess
+  m_Name: guess text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -791,8 +791,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -652, y: 340}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -223.29498, y: 101.5}
+  m_SizeDelta: {x: 411.41, y: 203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1205058151
 MonoBehaviour:
@@ -841,8 +841,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 96
+  m_fontSizeBase: 96
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1203,9 +1203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49498b0cf59be314590ab8805e268996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minValue: 0
-  maxValue: 0
-  guessText: {fileID: 0}
+  minValue: 1
+  maxValue: 96
+  guessText: {fileID: 1205058151}
 --- !u!1 &1832532658
 GameObject:
   m_ObjectHideFlags: 0

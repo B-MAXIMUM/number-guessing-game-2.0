@@ -21,12 +21,12 @@ public class gameplay : MonoBehaviour
     }
     public void sex()
     {
-        maxValue = guess -1 ;
+        maxValue = guess - 1 ;
         NextGuess();
     }
     public void NextGuess()
     {
-        guess= Random.Range(minValue, maxValue + 1);
+        guess = Random.Range(minValue, maxValue + 1);
         guessText.text = guess.ToString();
     }
     
